@@ -4,7 +4,7 @@ res=0
 num1=0
 num2=0
 reps=0
-r=0
+r=int(0)
 
 print("1-Soma")
 print("2-subtração")
@@ -98,7 +98,7 @@ while r==0:
         print("Erro 1 - opção invalida!")
 
     reps=1
-    t=input("deseja realizar outra operação? sim-0, não-1: ")#não funciona :(
+    t=int(input("deseja realizar outra operação? sim-0, não-1: "))#não funciona :(
     if t==1:
         r=r+1
 
