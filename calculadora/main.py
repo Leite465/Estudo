@@ -98,7 +98,7 @@ while r==0:
         print("Erro 1 - opção invalida!")
 
     reps=1
-    t=int(input("deseja realizar outra operação? sim-0, não-1: "))#não funciona :(
+    t=int(input("deseja realizar outra operação? sim-0, não-1: "))#agora vai!
     if t==1:
         r=r+1
 
