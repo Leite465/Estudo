@@ -4,6 +4,7 @@ res=0
 num1=0
 num2=0
 reps=0
+r=0
 
 print("1-Soma")
 print("2-subtração")
@@ -16,7 +17,7 @@ print("8-coseno")
 print("9-tangente")
 desc=int(input("Qual operação deseja realizar? "))
 
-while True:
+while r==0:
 
     if reps==1:
         print("1-Soma")
@@ -97,9 +98,9 @@ while True:
         print("Erro 1 - opção invalida!")
 
     reps=1
-    t=input("deseja realizar outra operação? sim-0, não-1: ")
+    t=input("deseja realizar outra operação? sim-0, não-1: ")#não funciona :(
     if t==1:
-        break
+        r=r+1
 
 else:
     print("Obrigado por utilizar a calculadora!")
