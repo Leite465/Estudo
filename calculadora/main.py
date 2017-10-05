@@ -16,6 +16,7 @@ print("6-potenciação")
 print("7-seno")
 print("8-coseno")
 print("9-tangente")
+print("10-calculadora")
 desc=int(input("Qual operação deseja realizar? "))
 
 while r==0:
@@ -96,14 +97,20 @@ while r==0:
 
         print("O coseno de {} é {}!".format(num1, res))
     #tangente
-    elif desc==8:
+    elif desc==9:
         num1 = int(input("qual é o angulo que desega encontrar a tangente? "))
 
         res=math.radians(num1)
         res=math.tan(res)
 
         print("A tangente de {} é {}!".format(num1, res))
-    #caso o numero escolhido fot invalido
+    elif desc==10:
+        num1=int(input("Qual é a tabuada que deseja fazer? "))
+        num2=int(input("Até qual número deseja fazer? "))
+
+        for i in range(0, num2):
+
+    #caso o numero escolhido for invalido
     else:
         print("Erro 1 - opção invalida!")
 
