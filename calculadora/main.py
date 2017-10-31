@@ -6,6 +6,9 @@ num1=0
 num2=0
 reps=0
 r=int(0)
+er=0
+tab=([])
+algo=([])
 #menu de escolha simples
 print("1-Soma")
 print("2-subtração")
@@ -108,14 +111,34 @@ while r==0:
         num1=int(input("Qual é a tabuada que deseja fazer? "))
         num2=int(input("Até qual número deseja fazer? "))
 
-        for i in range(0, num2):
+        tab=[num2]
+        tab.append(num2)
+        algo=[num2]
+        algo.append(num2)
+
+        for i in range(0, num2+1):
+            num=i*num2
+            tab.insert(i, num)
+            algo.insert(i, i)
+
+        for j in range(0, num2+1):
+
+            print("{}x{}={}".format(algo[j], num1, tab[j]))
+
 
     #caso o numero escolhido for invalido
     else:
         print("Erro 1 - opção invalida!")
+        er=1
 
     reps=1#define a variavel reps pra 1, sendo assim o menu de seleção ira aparecer
-    t=int(input("deseja realizar outra operação? sim-0, não-1: "))#escolha se continua ou não a realizar operações
+
+    if er!=1:
+        t=int(input("deseja realizar outra operação? sim-0, não-1: "))#escolha se continua ou não a realizar operações
+    else:
+        t=int(input("deseja sair da calculadora? sim-1 não-0"))
+
+
     if t==1:#se a escolha for 1(não) r vai receber 1, sendo assim ira sair do loop while
         r=r+1
 
